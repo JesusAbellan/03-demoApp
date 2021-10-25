@@ -1,0 +1,9 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Inicio</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content class="ion-padding">
+    <ion-button *ngFor="let c of misComponentes" expand="full" [color] ="c.color" [routerLink]="c.ruta" shape="round"><ion-icon slot="start" [name]="c.icono"></ion-icon>{{c.nombre}}</ion-button>
+</ion-content>

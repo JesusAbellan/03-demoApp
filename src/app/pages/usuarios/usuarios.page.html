@@ -1,0 +1,28 @@
+<app-cabecera [titulo]="'Usuarios'"></app-cabecera>
+
+<ion-content>
+  <ion-refresher #miRefresher slot="fixed" (ionRefresh)="refrescar()">
+    <ion-refresher-content
+      refreshingSpinner="crescent"
+       refreshingText="Cargando...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list>
+    <ion-item *ngFor="let item of datos; let i = index">
+      <ion-label>Item número {{i + 1}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  
+  <ion-infinite-scroll #miInifiniteScroll threshold="100px" (ionInfinite)="loadData()">
+    <ion-infinite-scroll-content
+      loadingSpinner="crescent"
+      loadingText="Cargando..">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+  <ion-button (click)="onClick()" expand="block" shape="round">
+    Muestra Usuarios
+  </ion-button>
+</ion-content>

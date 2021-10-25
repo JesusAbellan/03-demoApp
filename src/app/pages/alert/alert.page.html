@@ -1,0 +1,12 @@
+<app-cabecera [titulo] ="'Alert'" [color] ="'primary'"></app-cabecera>
+<ion-content class="ion-no-padding">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col *ngFor="let boton of botones" size="6">
+        <ion-button (click)="onClick(boton.numero)" expand="block" [color]="boton.color" shape="round">
+          {{boton.nombre}}
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
