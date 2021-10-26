@@ -1,0 +1,17 @@
+<app-cabecera></app-cabecera>
+
+<ion-content>
+  
+  <ion-list>
+    <ion-item *ngFor="let item of datos; let i = index">
+      <ion-label>Item número {{i + 1}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll #miInifiniteScroll threshold="100px" (ionInfinite)="loadData()">
+    <ion-infinite-scroll-content
+      loadingSpinner="crescent"
+      loadingText="Cargando..">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

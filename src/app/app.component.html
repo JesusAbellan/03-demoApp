@@ -1,3 +1,22 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu-toggle auto-hide="true">
+    <ion-menu #miMenu autohide="true" side="start" menuId="menuPrincipal" autohide="true" contentId="main">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>DemoApp</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-list>
+          <ion-item *ngFor="let c of componentes" [routerLink]="c.ruta">
+            <ion-icon slot="start" [color]="c.color" [name]="c.icono">
+            </ion-icon>
+            <ion-label>{{c.nombre}}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+  </ion-menu-toggle>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

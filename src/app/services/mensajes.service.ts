@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { ToastController } from '@ionic/angular';
+import { ToastController, LoadingController } from '@ionic/angular';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MensajesService {
 
-  constructor(public toastController:ToastController) { }
+  constructor(public toastController:ToastController, public loadingController:LoadingController) { }
 
   async muestraMensaje(mensaje:string,tiempo?:number){
     let t = tiempo? tiempo: 2000;
@@ -16,5 +16,16 @@ export class MensajesService {
     })
 
    toast.present();
+  }
+
+  async muestraLoading( tiempo?:number){
+    const loading = await this.loadingController.create({
+      message: 'Cargando...',
+      duration: tiempo
+    });
+    await loading.present();
+  }
+  async ocultaLoading(){
+    await this.loadingController.dismiss();
   }
 }

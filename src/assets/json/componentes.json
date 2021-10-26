@@ -15,5 +15,27 @@
     "ruta":"/usuarios",
     "icono":"person",
     "color":"warning"
+  },
+  {
+    "nombre": "Ion Refresher",
+    "ruta": "/ion-refresher",
+    "icono":"alarm-outline",
+    "color": "danger"
+  },{
+    "nombre":"Infinite",
+    "ruta":"/infinite",
+    "icono":"infinite",
+    "color":"tertiary"
+  },
+  {
+    "nombre": "Loading",
+    "ruta": "/loading",
+    "icono":"reload-outline",
+    "color": "amarillorubio"
+  },{
+    "nombre":"Tabs",
+    "ruta":"/tabs",
+    "icono":"bookmarks-outline",,
+    "color":"medium"
   }
 ]

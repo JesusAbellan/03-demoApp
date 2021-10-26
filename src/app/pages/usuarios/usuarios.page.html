@@ -14,14 +14,6 @@
     </ion-item>
   </ion-list>
 
-  
-  <ion-infinite-scroll #miInifiniteScroll threshold="100px" (ionInfinite)="loadData()">
-    <ion-infinite-scroll-content
-      loadingSpinner="crescent"
-      loadingText="Cargando..">
-    </ion-infinite-scroll-content>
-  </ion-infinite-scroll>
-
   <ion-button (click)="onClick()" expand="block" shape="round">
     Muestra Usuarios
   </ion-button>
