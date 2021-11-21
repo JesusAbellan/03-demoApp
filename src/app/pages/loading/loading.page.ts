@@ -16,6 +16,6 @@ export class LoadingPage implements OnInit {
   }
 
   async recargar(){
-    await this._mensajeServices.muestraLoading(1000);
+    await this._mensajeServices.muestraLoading('Cargando...',1000);
   }
 }

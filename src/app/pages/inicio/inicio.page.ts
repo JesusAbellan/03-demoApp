@@ -15,7 +15,7 @@ export class InicioPage implements OnInit {
 
   async ngOnInit() {
     
-    await this._mensajesServices.muestraLoading().then(async () => {
+    await this._mensajesServices.muestraLoading('Cargando...').then(async () => {
       try{
         this.misComponentes = await this._componentesService.getComponentes();
         let filtrados = this.misComponentes.filter(data => {

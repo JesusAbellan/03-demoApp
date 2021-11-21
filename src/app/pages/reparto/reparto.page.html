@@ -1,0 +1,15 @@
+<ion-content>
+    <ion-slides class="cien" pager="true">
+        <ion-slide *ngFor="let actor of actores">
+            <ion-card>
+                <ion-card-header>
+                    <ion-card-subtitle>{{actor.character}}</ion-card-subtitle>
+                    <ion-card-title>{{actor.name}}</ion-card-title>
+                </ion-card-header>
+                <ion-card-content *ngIf="actor.profile_path">
+                    <ion-img [src]="'https://image.tmdb.org/t/p/original/'+actor.profile_path"></ion-img>
+                </ion-card-content>
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
+</ion-content>

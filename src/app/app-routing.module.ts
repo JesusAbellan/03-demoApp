@@ -31,10 +31,9 @@ const routes: Routes = [
     path: 'loading',
     loadChildren: () => import('./pages/loading/loading.module').then( m => m.LoadingPageModule)
   },  {
-    path: '**',
-    redirectTo:'inicio',
-    pathMatch: 'full'
-  },
+    path: 'ficha-pelicula',
+    loadChildren: () => import('./pages/ficha-pelicula/ficha-pelicula.module').then(m => m.FichaPeliculaPageModule)
+  }
 ];
 
 @NgModule({

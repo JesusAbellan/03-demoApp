@@ -18,9 +18,9 @@ export class MensajesService {
    toast.present();
   }
 
-  async muestraLoading( tiempo?:number){
+  async muestraLoading(mensaje:string, tiempo?:number){
     const loading = await this.loadingController.create({
-      message: 'Cargando...',
+      message: mensaje,
       duration: tiempo
     });
     await loading.present();

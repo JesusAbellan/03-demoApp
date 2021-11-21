@@ -4,21 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { InfinitePageRoutingModule } from './infinite-routing.module';
+import { FichaPeliculaPageRoutingModule } from './ficha-pelicula-routing.module';
 
-import { InfinitePage } from './infinite.page';
+import { FichaPeliculaPage } from './ficha-pelicula.page';
 import { ComponentesModule } from '../../componentes/componentes.module';
-import { PipesModule } from '../../pipes/pipes.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    InfinitePageRoutingModule,
-    ComponentesModule,
-    PipesModule
+    FichaPeliculaPageRoutingModule,
+    ComponentesModule
   ],
-  declarations: [InfinitePage]
+  declarations: [FichaPeliculaPage]
 })
-export class InfinitePageModule {}
+export class FichaPeliculaPageModule {}

@@ -1,0 +1,17 @@
+<app-cabecera [titulo] ="'Ficha Pelicula'" [color] ="'danger'"></app-cabecera>
+
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="descripcion">
+        <ion-icon name="flash"></ion-icon>
+        <ion-label>Descripción</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="reparto">
+        <ion-icon name="apps"></ion-icon>
+        <ion-label>Reparto</ion-label>
+        <ion-badge>{{numActores}}</ion-badge>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>
